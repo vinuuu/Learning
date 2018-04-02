@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'/>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+ <title>Document</title>
+</head>
+<body ng-app>
+<div class="jumbotron" ng-init="'items'=[1,2,3]" >
+    <h1 class="display-3">Learing Angularjs</h1>
+    <p class="lead">Simple and Easy</p>
+    <hr  class="my-2">
+</div>
+<div class="container" ng-init="dummy=['Bill','Steve','Ram']">
+    <p>{{'vin'+'js'}}</p>
+    <h1>First AngularJS Application</h1>
+
+    Enter Numbers to Multiply: 
+    <input type="text" ng-model="Num1" /> x <input type="text" ng-model="Num2" /> 
+    = <span>{{Num1 * Num2}}</span>  
+    <hr>   
+
+<h1>Types :</h1>
+
+Enter Name:  <input type="text" ng-model="name" /> <br />
+data-ng-bind: <span data-ng-bind="name"></span><br />
+data-ng:bind: <span data-ng:bind="name"></span><br />
+data:ng:bind: <span data:ng:bind="name"></span><br />
+x:ng:bind:    <span x:ng:bind="name"></span><br />
+ng:bind:      <span ng:bind="name"></span><br />
+x-ng-bind:    <span x-ng-bind="name"></span><br />
+x_ng_bind:    <span x_ng_bind="name"></span><br />
+ng_bind:      <span ng_bind="name"></span>
+
+   <table class="table">
+       <thead>
+           <tr>
+               <th>Concept</th>
+               <th>Description</th>
+           </tr>
+       </thead>
+       <tbody>         
+           <tr><td>Template</td><td>HTML with additional markup</td></tr>
+           <tr><td>Directives</td><td>Extends the HTML with custom attributes and elements</td></tr>
+           <tr><td>Model</td><td>The data shown to the user in the view and with which the user interacts</td></tr>
+           <tr><td>Scope</td><td>A context where the model is stored so that controllers, directives and expressions can access it</td></tr>
+           <tr><td>Expressions</td><td>Executes JavaScript code inside brackets {{ }}.</td></tr>
+           <tr><td>Compiler</td><td>Parses the template and instantiates directives and expressions</td></tr>
+           <tr><td>Filter</td><td>Formats the value of an expression for display to the user</td></tr>
+           <tr><td>View</td><td>what the user sees (the DOM)</td></tr>
+           <tr><td>Data</td><td>Binding	Sync data between the model and the view</td></tr>
+           <tr><td>Controller</td><td>Maintains the application data and business logic</td></tr>
+           <tr><td>Module</td><td>a container for different parts of an app including controllers, services, filters, directives which configure the Injector</td></tr>
+           <tr><td>Service</td><td>Reusable business logic, independent of views</td></tr>
+           <tr><td>Dependency Injection</td><td>Creates and wires objects and functions</td></tr>
+           <tr><td>Injector</td><td>Dependency injection container</td></tr>
+           
+       </tbody>
+   </table>
+<hr>
+<table class="table">
+        <thead>
+            <tr>
+                <th>Directive</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>         
+            <tr><td>ng-app</td><td>Auto bootstrap AngularJS application.</td></tr>
+            <tr><td>ng-init</td><td>Initializes AngularJS variables</td></tr>
+            <tr><td>ng-model</td><td>Binds HTML control's value to a property on the $scope object.</td></tr>
+            <tr><td>ng-controller</td><td>Attaches the controller of MVC to the view.</td></tr>
+            <tr><td>ng-bind</td><td>Replaces the value of HTML control with the value of specified AngularJS expression.</td></tr>
+            <tr><td>ng-repeat</td><td>Repeats HTML template once per each item in the specified collection.</td></tr>
+            <tr><td>ng-show</td><td>Display HTML element based on the value of the specified expression.</td></tr>
+            <tr><td>ng-readonly</td><td>Makes HTML element read-only based on the value of the specified expression</td></tr>
+            <tr><td>ng-disabled</td><td>Sets the disable attribute on the HTML element if specified expression evaluates to true.</td></tr>
+            <tr><td>ng-if</td><td>Removes or recreates HTML element based on an expression. </td></tr>
+            <tr><td>ng-click</td><td>Specifies custom behavior when an element is clicked.</td></tr>
+           
+            
+        </tbody>
+    </table>
+ 
+</div>
+</body>
+</html>
