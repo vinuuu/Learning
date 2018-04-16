@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'/>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+ <title>Document</title>
+</head>
+<body ng-app="myapp"  >
+   
+<div  ng-controller="parentController" class="jumbotron" >
+    <h1 class="display-3">Learing Angularjs</h1>
+    <p class="lead">Simple and Easy</p>
+    <hr  class="my-2">
+<input type="text"  ng-model="firstName" >
+<input type="text"  ng-model="childName" >
+<div ng-controller="childController" >
+        <input type="text" ng-model="firstName" >
+        <input type="text" ng-model="childName" >
+        <input type="text" ng-model="lastName" >
+    </div>
+</div>
+</body>
+</html> 
+<script>
+
+(function(){
+    var app=angular.module("myapp",[]); 
+    angular.module("myapp").controller('myCtrl', function($scope, $http,$rootScope) {
+    $scope.firstName = "John";
+    $rootScope.testRoot="MG";
+    $scope.lastName = "Doe";
+
+        $scope.blur=function(){
+            alert($scope.firstName);
+            alert($scope.lastName);
+        }
+    // //ajax functions
+    // $http.get("welcome.htm")
+    // .then(function(response) {
+    //     $scope.myWelcome = response.data;
+    // });
+
+    
+});
+   app.controller('parentController', function ($scope, $rootScope) {
+            $scope.firstName = "parentController";
+            $scope.lastName = "LastNameController";
+        });
+    app.controller('childController', function ($scope) {
+            $scope.firstName = "childController";
+            $scope.childName = "childdddd";
+            $scope.$watch('firstName',function(newv,old){
+                alert(old);
+                alert(newv);
+                if(old!==newv){
+                $scope.childName = "hhhhh";
+                }
+            });
+        });
+
+        app.controller('otherController', function ($scope,$rootScope) {
+            $scope.firstName = "kkk";
+            $rootScope.testRoot="mggggggggg";
+        });
+}());
+</script>
+
