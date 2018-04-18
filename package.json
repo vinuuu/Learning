@@ -1,0 +1,13 @@
+{
+  "name": "Example",
+  "namelower": "example",
+  "version": "0.0.1",
+  "description": "An example AngularJS project",
+  "readme": "README.md",
+  "devDependencies": {
+    "jquery": "3.3.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.0"
+  }
+}
